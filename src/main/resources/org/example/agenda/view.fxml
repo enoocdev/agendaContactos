@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1099.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.agenda.Controller">
+   <children>
+      <TableView id="tablaContactos" fx:id="contacts" prefHeight="573.0" prefWidth="591.0" >
+        <columns>
+          <TableColumn fx:id="columnaNombre" prefWidth="123.0" text="nombre" />
+          <TableColumn fx:id="columnaTel" prefWidth="191.0" text="telefono" />
+            <TableColumn fx:id="columnaEmail" prefWidth="276.0" text="email" />
+        </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" prefHeight="360.0" prefWidth="395.0">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <ImageView id="imagenUsuario" fx:id="userImg" fitHeight="243.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true" />
+         <Label fx:id="userName" alignment="CENTER" prefHeight="17.0" prefWidth="524.0" text="Nombre : N/A">
+            <VBox.margin>
+               <Insets bottom="10.0" top="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="userTel" alignment="CENTER" prefHeight="17.0" prefWidth="331.0" text="Telefono : 12356789">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="userEmail" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="416.0" text="Correo : ejemplo.ejemplo.es">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="userWeb" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="396.0" text="Web : www.ejemplo.es">
+            <opaqueInsets>
+               <Insets bottom="10.0" />
+            </opaqueInsets>
+         </Label>
+         <Pane prefHeight="200.0" prefWidth="200.0">
+            <children>
+               <Button fx:id="agregarContacto" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="32.0" mnemonicParsing="false" onAction="#agregarContacto" prefHeight="25.0" prefWidth="110.0" text="Agregar contacto" />
+            </children>
+         </Pane>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>

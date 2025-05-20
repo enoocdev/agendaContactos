@@ -1,0 +1,5 @@
+#
+#Mon May 19 17:05:59 CEST 2025
+password=abc123.
+url=jdbc:mysql://127.0.0.1:3306/agenda
+usuario=root

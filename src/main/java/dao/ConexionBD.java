@@ -40,7 +40,7 @@ public class ConexionBD {
         }*/
         Properties propiedades = new Properties();
         try {
-            var path = Paths.get("Prueba.txt");
+            var path = Paths.get("db.cnf");
             propiedades.load(Files.newInputStream(path));
 
             conexion =  DriverManager.getConnection((String) propiedades.get("url"), (String) propiedades.get("usuario"), (String) propiedades.get("password"));
@@ -60,7 +60,7 @@ public class ConexionBD {
         propiedades.setProperty("usuario","root");
         propiedades.setProperty("password","abc123.");
         propiedades.setProperty("url","jdbc:mysql://127.0.0.1:3306/agenda");
-        var path = Paths.get("Prueba.txt");
+        var path = Paths.get("db.cnf");
         var oos = Files.newOutputStream(path);
         propiedades.store(oos,"");
 
